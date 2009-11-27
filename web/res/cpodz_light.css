@@ -1,0 +1,49 @@
+/*
+ * COLOR GUIDE, "light" style
+ *
+ * nearly black - #111 - page background, main grid edging
+ * white        - #fff - background of header, footer, and news
+ * light blue   - #bbf - background of main text
+ * dark blue    - #014 - hrefs (hovered, or static), borders of inputs
+ * ? - un-hovered hrefs, background of inputs
+ * black        - #000 - body text
+ * light grey   - #eee - msg's, some inputs or where needed for extra contrast
+ *
+ */
+
+body { color: #000; background-color: #111 }
+
+#main { background-color: #fff }
+
+#header { border-left: 1px solid #111 }
+#header h1 { color: #014 }
+
+#logo { background-image: url(/res/sphere_light.png) }
+
+#rightCol { border-left: 1px solid #111 }
+
+#footer { border-left: 1px solid #111 }
+
+h1, h2 { color: #111 }
+h3 { color: #740 }
+
+#logo, #login, #nav, #info { background-color: #bbf }
+#header, #nav, #info { border-bottom: 1px solid #111 }
+
+#info a img { border: 1px solid #740 }
+#info a img:hover { border: 1px solid #f91 }
+#info a:visited { color: #014 }
+
+#login input, form input, form textarea { border: 1px solid #014; color: #111; background-color: #eee }
+form input.disabled { border: 1px solid #014; color: #888; background-color: #444 }
+
+a { color: #014 ! important; font-weight: bold }
+
+#news h2, #stats h2 { background-color: #f91 }
+
+.msg { color: #014; background-color: #eee; border: 1px solid #740 }
+.err { color: #f91; background-color: #111; border: 1px solid #740 }
+
+#themeSelect { border: 1px solid #111; background-color: #eee }
+#themeSelect img { border: 1px solid #111 }
+

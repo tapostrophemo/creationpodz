@@ -1,0 +1,49 @@
+/*
+ * COLOR GUIDE, "dark" style
+ *
+ * light blue  - #bbf - page background, main grid edging
+ * med blue    - #136 - background of header, footer, and news
+ * dark blue   - #014 - background of main text
+ * orange      - #f91 - hrefs (hovered, or static), borders of inputs
+ * dark orange - #740 - un-hovered hrefs, background of inputs
+ * white       - #fff - body text
+ *
+ */
+
+body { color: #fff; background-color: #bbf }
+
+#main { background-color: #136 }
+
+#header { border-left: 1px solid #bbf }
+
+#logo { background-image: url(/res/sphere.png) }
+
+#rightCol { border-left: 1px solid #bbf }
+
+#footer { border-left: 1px solid #bbf }
+
+h1, h2 { color: #f91 }
+h3 { color: #fff }
+
+#logo, #login, #nav, #info { background-color: #014 }
+#header, #nav, #info { border-bottom: 1px solid #bbf }
+
+#info a img { border: 1px solid #740 }
+#info a img:hover { border: 1px solid #f91 }
+#info a:visited { color: #014 }
+
+#login input, form input, form textarea { border: 1px solid #f91; color: white; background-color: #740 }
+form input.disabled { border: 1px solid #740; color: #888; background-color: #444 }
+
+#nav a { color: #f91 }
+a { color: #f91 ! important }
+
+#news h2, #stats h2 { background-color: #014 }
+
+.msg, .err { color: white }
+.msg { border: 1px solid #bbf; background-color: #136 }
+.err { border: 1px solid #f91; background-color: #136 }
+
+#themeSelect { border: 1px solid #f91; background-color: #740 }
+#themeSelect img { border: 1px solid #f91 }
+
