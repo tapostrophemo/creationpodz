@@ -1,8 +1,8 @@
 <?php
 error_reporting(E_ALL);
 
-$system_folder       ='/home/djp/prog/creationpodz/lib/ci-1.7.1';
-$application_folder = '/home/djp/prog/creationpodz/app';
+$system_folder       ='../lib/ci-1.7.2';
+$application_folder = '../app';
 
 if (strpos($system_folder, '/') === FALSE) {
 	if (function_exists('realpath') AND @realpath(dirname(__FILE__)) !== FALSE) {
