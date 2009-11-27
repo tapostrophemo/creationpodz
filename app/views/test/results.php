@@ -4,7 +4,7 @@
 <style type="text/css">
 * { font-family: Arial, sans-serif; font-size: 9pt }
 h1 { font-size: 14pt }
-.err, .pas { color: white; font-weight: bold; padding: 0 0.3em; margin: 1px }
+.err, .pas { color: white; font-weight: bold; padding: 0 0.3em; border: 1px solid white }
 .err { background-color: red }
 .pas { background-color: green }
 </style>
@@ -25,6 +25,16 @@ h1 { font-size: 14pt }
 </li>
 <?php endforeach; ?>
 </ol>
+
+<script type="text/javascript">
+var results = document.getElementsByTagName("DIV");
+for (var i = 0; i < results.length; i++) {
+  if ("err" == results[i].className) {
+    document.body.className = "err";
+    break;
+  }
+}
+</script>
 
 <strong>All tests completed in <?=$this->benchmark->elapsed_time('total_execution_time_start', 'total_execution_time_end')?> seconds.</strong>
 

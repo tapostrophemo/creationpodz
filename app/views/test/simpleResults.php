@@ -1,6 +1,6 @@
-=========================================================
-Unit test results for <?=$modelname."\n"?>
-=========================================================
+# =========================================================
+# Unit test results for <?=$modelname."\n"?>
+# =========================================================
 <?php
 foreach ($results as $result) {
   if ($result['Result'] == 'Passed') {
@@ -13,5 +13,5 @@ foreach ($results as $result) {
 }
 ?>
 
-All tests completed in <?=$this->benchmark->elapsed_time('total_execution_time_start', 'total_execution_time_end')?> seconds.
+# All tests completed in <?=$this->benchmark->elapsed_time('total_execution_time_start', 'total_execution_time_end')?> seconds.
 
