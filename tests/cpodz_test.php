@@ -17,7 +17,7 @@ class CPodz_test extends WebTestCase
     $this->setField('username', 'Sam');
     $this->clickSubmit('login');
     $this->assertText('The password field is required');
-    //$this->assertNoText('Invalid username or password'); // TODO: figure out why form_validation displays this
+    $this->assertNoText('Invalid username or password');
     $this->assertField('username', 'Sam');
     $this->assertField('password', '');
   }

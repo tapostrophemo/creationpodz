@@ -56,6 +56,10 @@ class CPodz extends MY_Controller
   }
 
   function _has_user_account($junk) {
+    if ($this->form_validation->can_short_circut('_has_user_account')) {
+      return false;
+    }
+
     $this->load->model('User');
     if (!$this->User->hasAccount($this->input->post('username'), $this->input->post('password'))) {
       $this->form_validation->set_message('_has_user_account', 'Invalid username or password');
