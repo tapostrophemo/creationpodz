@@ -13,6 +13,7 @@ else {
   switch ($this->session->userdata('theme')) {
     case 1: echo link_tag('res/cpodz_light.css'); break;
     case 2: echo link_tag('res/cpodz_dark.css'); break;
+    case 3: echo link_tag('res/cpodz_heliotrope.css'); break;
     default: echo link_tag('res/cpodz_dark.css');
   }
 }

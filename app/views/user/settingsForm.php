@@ -24,12 +24,16 @@
   <td><label for="theme">theme:</label></td>
   <td><table id="themeSelect">
    <tr>
-    <td>light <input type="radio" name="theme" value="1" <?=set_radio('theme', 1, 1 == $user->theme)?>/></td>
+    <td><input type="radio" name="theme" value="1" <?=set_radio('theme', 1, 1 == $user->theme)?>/> light</td>
     <td><?=img(array('src' => 'res/light_theme.png', 'alt' => 'light theme'))?></td>
    </tr>
    <tr>
-    <td>dark <input type="radio" name="theme" value="2" <?=set_radio('theme', 2, 2 == $user->theme)?>/></td>
+    <td><input type="radio" name="theme" value="2" <?=set_radio('theme', 2, 2 == $user->theme)?>/> dark</td>
     <td><?=img(array('src' => 'res/dark_theme.png', 'alt' => 'dark theme'))?></td>
+   </tr>
+   <tr>
+    <td><input type="radio" name="theme" value="3" <?=set_radio('theme', 3, 3 == $user->theme)?>/> heliotrope</td>
+    <td><?=img(array('src' => 'res/heli_theme.png', 'alt' => 'heliotrope theme'))?></td>
    </tr>
   </table></td>
  </tr>

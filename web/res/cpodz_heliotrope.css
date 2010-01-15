@@ -1,0 +1,48 @@
+/*
+ * COLOR GUIDE, "heliotrope" - #DF73FF, according to wikipedia
+ *
+ * heliotrope, or light purple  - #DF73FF - page background, main grid edging
+ * dark purple    - #AC00E0 - background of header, footer, and news
+ * med purple     - #CB1FFF - background of main text
+ * white          - #fff - body text
+ * black          - #000 - section/header text
+ * dark yellow    - #FFD342 - errors
+ * darkest purple - #9800C7 - message backgrounds
+ */
+
+body { color: #fff; background-color: #DF73FF }
+
+#main { background-color: #CB1FFF }
+
+#header { border-left: 1px solid #DF73FF }
+
+#logo { background-image: url(/res/helisphere.png) }
+
+#rightCol { border-left: 1px solid #DF73FF }
+
+#footer { border-left: 1px solid #DF73FF }
+
+h1, h2 { color: #000 }
+h3 { color: #fff }
+
+#logo, #login, #nav, #info { background-color: #AC00E0 }
+#header, #nav, #info { border-bottom: 1px solid #DF73FF }
+
+#info a img { border: 1px solid #DF73FF }
+#info a img:hover { border: 1px solid #fff }
+#info a:visited { color: #014 }
+
+#login input, form input, form textarea { border: 1px solid #DF73FF; color: white; background-color: #CB1FFF }
+form input.disabled { border: 1px solid #740; color: #888; background-color: #444 }
+
+#nav a { color: #FFDF75 }
+a { color: #FFDF75 ! important }
+
+#news h2, #stats h2 { background-color: #DF73FF }
+
+.msg { border: 1px solid white; background-color: #9800C7; color: white }
+.err { border: 1px solid black; background-color: #FFD342; color: black }
+
+#themeSelect { border: 1px solid #DF73FF; background-color: #CB1FFF }
+#themeSelect img { border: 1px solid #DF73FF }
+
