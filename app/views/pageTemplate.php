@@ -1,25 +1,24 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta name="description" content="creationpodz :: They're not trash; they're found object action figures!"/>
 <meta name="keywords" content="found object, action figure, action figures, aluminum foil, handmade, homemade, toys, trash"/>
 <title>creationpodz</title>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="/res/cpodz.css"/>
+<?php if (!$this->session->userdata('loggedIn')): ?>
+<link rel="stylesheet" type="text/css" href="/res/cpodz_dark.css"/>
+<?php else: ?>
 <?php
-echo link_tag('res/cpodz.css');
-if (!$this->session->userdata('loggedIn')) {
-  echo link_tag('res/cpodz_dark.css');
+switch ($this->session->userdata('theme')) {
+  case 1: echo link_tag('res/cpodz_light.css'); break;
+  case 2: echo link_tag('res/cpodz_dark.css'); break;
+  case 3: echo link_tag('res/cpodz_heliotrope.css'); break;
+  default: echo link_tag('res/cpodz_dark.css');
 }
-else {
-  switch ($this->session->userdata('theme')) {
-    case 1: echo link_tag('res/cpodz_light.css'); break;
-    case 2: echo link_tag('res/cpodz_dark.css'); break;
-    case 3: echo link_tag('res/cpodz_heliotrope.css'); break;
-    default: echo link_tag('res/cpodz_dark.css');
-  }
-}
-
-echo link_tag('favicon.ico', 'icon', 'image/ico');
 ?>
+<?php endif; ?>
 </head>
 <body>
 
@@ -59,9 +58,9 @@ echo link_tag('favicon.ico', 'icon', 'image/ico');
  </div>
 
  <div id="footer">
-  Comments and uploaded files owned by the poster.<br>
-  All the rest -- Copyright &copy; 2009, Dan Parks. All Rights Reserved.<br>
-  <?=anchor('legal', 'Legal info.')?><br>
+  Comments and uploaded files owned by the poster.<br/>
+  All the rest -- Copyright &copy; 2009, 2010, Dan Parks. All Rights Reserved.<br/>
+  <?=anchor('legal', 'Legal info.')?><br/>
   <small>version 0.2</small>
  </div>
 
