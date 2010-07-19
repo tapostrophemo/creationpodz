@@ -1,11 +1,12 @@
 create table accounts(
   id            int unsigned auto_increment,
   username      varchar(32) not null unique,
-  password      varchar(40) not null,
+  passwd        varchar(40) not null,
   salt          varchar(32) not null,
   registered_on date not null,
   email         varchar(255) default null,
   theme         mediumint not null default 1,
+  persistence_token varchar(255),
   primary key(id)
 );
 

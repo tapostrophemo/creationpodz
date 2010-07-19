@@ -2,3 +2,5 @@ log
 web/captcha
 web/thumbs
 web/uploads
+webrat.log
+

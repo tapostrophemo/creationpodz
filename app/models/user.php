@@ -52,7 +52,7 @@ class User extends Model
       $row = $query->row();
       $salt = $row->salt;
       $this->db->where('username', $username);
-      $this->db->where('password', sha1($password . $salt));
+      $this->db->where('passwd', sha1($password . $salt));
       $query = $this->db->get('accounts');
       return 1 == $query->num_rows();
     }
@@ -80,7 +80,7 @@ class User extends Model
     $salt = salt();
     $data = array(
       'username'      => $username,
-      'password'      => sha1($password . $salt),
+      'passwd'      => sha1($password . $salt),
       'salt'          => $salt,
       'email'         => $email,
       'registered_on' => mdate('%Y-%m-%d', time()),
