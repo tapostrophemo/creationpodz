@@ -26,3 +26,11 @@ Feature: User Authentication
     And I should not see "account"
     And I should not see "write blog"
 
+  Scenario: username and password validation
+    Given I go to the home page
+    When I fill in "username" with "Sam"
+    And I fill in "password" with " "
+    And I press "login"
+    Then I should see "The password field is required"
+    But I should not see "Invalid username or password"
+

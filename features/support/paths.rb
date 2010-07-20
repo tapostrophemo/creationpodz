@@ -7,6 +7,9 @@ module NavigationHelpers
     when /the home\s?page/
       '/'
 
+    when /the registration page/
+      '/signup'
+
     else
       begin
         page_name =~ /the (.*) page/
