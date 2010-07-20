@@ -50,6 +50,17 @@ class Account < ActiveRecord::Base
 end
 
 
+### setup for hooks to clean up database ###
+
+@db_config_path = File.dirname(__FILE__)+"/../../app/config/database.php"
+@db_config = File.read(@db_config_path).split("\n")
+@db_config.grep(/'(?:database|username|password)'/) do |line|
+  if line =~ /username.*'([^']+)'/ then @@db_user = $1 end
+  if line =~ /password.*'([^']+)'/ then @@db_pass = $1 end
+  if line =~ /database.*'([^']+)'/ then @@db_name = $1 end
+end
+
+
 ### helpers ###
 
 def run(cmd)
