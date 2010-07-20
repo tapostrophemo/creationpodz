@@ -24,3 +24,14 @@ Feature: User Registration
     When I press "signup"
     Then I should see "that username is already taken"
 
+  Scenario: create new user account
+    Given I go to the registration page
+    And I fill in "username" with "testUser1"
+    And I fill in "email" with "testUser1@somewhere.com"
+    And I fill in "password" with "Password1"
+    And I check "terms"
+    And I fill in the captcha
+    When I press "signup"
+    Then I should see "thanks for signing up, testUser1"
+    And an account should exist with username: "testUser1"
+
