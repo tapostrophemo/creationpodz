@@ -1,12 +1,10 @@
 ### prerequisites ###
 
-require 'spec/expectations'
+require 'rspec/expectations'
 
 require 'ruby-debug'
 
 require 'webrat'
-
-require 'pickle/world'
 
 require 'test/unit/assertions'
 World(Test::Unit::Assertions)
@@ -26,6 +24,7 @@ end
 ### minimal interface to data model ###
 
 require 'active_record'
+require 'pickle/world'
 
 ActiveRecord::Base.establish_connection(
   :adapter => 'mysql',
@@ -47,6 +46,9 @@ class Account < ActiveRecord::Base
     Authlogic::CryptoProviders::Sha1.join_token = ""
     Authlogic::CryptoProviders::Sha1.stretches = 1
   end
+end
+
+class Blog < ActiveRecord::Base
 end
 
 

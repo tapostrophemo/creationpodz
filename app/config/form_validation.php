@@ -29,6 +29,10 @@ $config = array(
     array('field' => 'title', 'label' => 'title', 'rules' => 'trim|required|max_length[32]|xss_clean'),
     array('field' => 'description', 'label' => 'description', 'rules' => 'trim|xss_clean|htmlspecialchars|nl2br'),
     array('field' => 'picType', 'label' => 'picture', 'rules' => 'callback__picOrUrlRequired')
+  ),
+
+  'admin_content' => array(
+    array('field' => 'entries[]', 'label' => 'entries', 'rules' => 'integer')
   )
 );
 

@@ -10,6 +10,9 @@ module NavigationHelpers
     when /the registration page/
       '/signup'
 
+    when /the admin select content page/
+      '/admin/content'
+
     else
       begin
         page_name =~ /the (.*) page/

@@ -7,6 +7,7 @@ create table accounts(
   email         varchar(255) default null,
   theme         mediumint not null default 1,
   persistence_token varchar(255),
+  is_admin      boolean default false,
   primary key(id)
 );
 
@@ -34,6 +35,7 @@ create table blogs(
   account_id int unsigned not null references accounts.id,
   title      varchar(255) not null,
   posted_on  datetime not null,
+  front_page boolean default false,
   entry      text not null,
   primary key(id)
 );

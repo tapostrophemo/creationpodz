@@ -1,3 +1,11 @@
+<?php foreach ($entries as $entry): ?>
+<h2><?=$entry->title?></h2>
+<h3><?=$entry->posted_on?></h3>
+<p><?=nl2br($entry->entry)?></p>
+<?php endforeach; ?>
+
+<hr/>
+
 <h2>first image</h2>
 <?=anchor('uploads/DSC06537.JPG', img('thumbs/cp_left.jpg'))?>
 <p>This is our first entry to the site. This creation was made by SamP.</p>

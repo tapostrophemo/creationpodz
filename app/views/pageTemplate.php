@@ -39,6 +39,9 @@ switch ($this->session->userdata('theme')) {
 <?php endif; ?>
     <td><?=anchor('about', 'about')?></td>
     <td><?=anchor('help', 'help')?></td>
+<?php if ($this->session->userdata('loggedIn') && $this->session->userdata('isAdmin')): ?>
+    <td><?=anchor('admin/content', 'admin')?></td>
+<?php endif; ?>
    </tr></table>
   </div>
   <div id="news"><?=$newsItems?></div>
@@ -59,7 +62,7 @@ switch ($this->session->userdata('theme')) {
 
  <div id="footer">
   Comments and uploaded files owned by the poster.<br/>
-  All the rest -- Copyright &copy; 2009, 2010, Dan Parks. All Rights Reserved.<br/>
+  All the rest -- Copyright &copy; 2009, 2010, 2011, Dan Parks. All Rights Reserved.<br/>
   <?=anchor('legal', 'Legal info.')?><br/>
   <small>version 0.2</small>
  </div>

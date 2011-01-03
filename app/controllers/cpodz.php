@@ -5,9 +5,11 @@
 class CPodz extends MY_Controller
 {
   function index() {
+    // TODO: put DB code in a model(?; which one(s)?)
+    $entries = $this->db->select('title, posted_on, entry')->where('front_page', true)->get('blogs')->result();
     $data = array(
       'newsItems' => $this->load->view('site/news', null, true),
-      'content'   => $this->load->view('site/mainContent', null, true));
+      'content'   => $this->load->view('site/mainContent', array('entries' => $entries), true));
     $this->load->view('pageTemplate', $data);
   }
 
@@ -51,6 +53,7 @@ class CPodz extends MY_Controller
       $this->load->model('User');
       $user = $this->User->findByUsername($this->input->post('username'));
       $this->session->set_userdata('theme', $user->theme);
+      $this->session->set_userdata('isAdmin', $user->is_admin);
       redirect();
     }
   }

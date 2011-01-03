@@ -3,7 +3,7 @@
 class User extends Model
 {
   function findByUsername($name) {
-    $this->db->select('id, username, registered_on, email, theme, salt');
+    $this->db->select('id, username, is_admin, registered_on, email, theme, salt');
     $this->db->where('username', $name);
     $query = $this->db->get('accounts');
     if (1 == $query->num_rows()) {
